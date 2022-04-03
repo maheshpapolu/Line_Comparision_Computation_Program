@@ -47,10 +47,21 @@ namespace Check_Equality_of_Two_Lines
             //formula for finding lenth of the line using Cartesian System
             double lengthOfTheLine_2 = Math.Sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
             Console.WriteLine("Length of the line using 2 points: " + lengthOfTheLine_2);
-
-            Console.WriteLine("\nCheck_Equality_of_Two_Lines\n");
-            Console.WriteLine(lengthOfTheLine_1.Equals(lengthOfTheLine_2));
-
+            Console.WriteLine("\nComparing Two Lines\n");
+            int result = lengthOfTheLine_1.CompareTo(lengthOfTheLine_2);
+            if (result > 0) 
+            {
+                Console.WriteLine("First line is greater than second line");
+            }
+            else if (result < 0) 
+            {
+                Console.WriteLine("First line is Smaller than second line");
+            }
+            else
+            {
+                Console.WriteLine("Both lines are equal");
+            }
+        
 
         }
     }
